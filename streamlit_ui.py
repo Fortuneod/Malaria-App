@@ -7,6 +7,13 @@ import matplotlib.pyplot as plt
 # -----------------------------------------------------------------------------
 # Configuration & Setup
 # -----------------------------------------------------------------------------
+#Page Configuration
+st.set_page_config(
+    page_title="Malaria Predictor",
+    page_icon="🦟",
+    layout="centered"
+)
+
 # Fix the unicode emoji representation in the title
 st.title('🦟 Malaria Severity Predictor')
 
