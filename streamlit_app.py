@@ -54,7 +54,7 @@ else:
 if "prediction_count" not in st.session_state:
     st.session_state.prediction_count = 0
 
-st.sidebar.subheader("🔢 Request Counter")
+st.sidebar.subheader("\U0001F522 Request Counter")
 st.sidebar.metric("Predictions made", st.session_state.prediction_count)
 
 # -------------------------------------------------
