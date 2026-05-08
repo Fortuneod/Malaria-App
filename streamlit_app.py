@@ -9,10 +9,11 @@ import matplotlib.pyplot as plt
 #Page Configuration
 st.set_page_config(
     page_title="Malaria Predictor",
-    page_icon="🦟",
+    page_icon="\U0001F99F",
     layout="centered"
 )
 
+st.title("\U0001F99F Malaria Severity Predictor")
 # -------------------------------------------------
 # 1. Load the model & feature list once
 # -------------------------------------------------
@@ -57,8 +58,6 @@ st.sidebar.metric("Predictions made", st.session_state.prediction_count)
 # -------------------------------------------------
 # 3. MAIN PAGE — Single Patient Prediction
 # -------------------------------------------------
-st.title("🦟 Malaria Severity Predictor")
-
 age = st.number_input('Age (years)', min_value=0, max_value=120, value=25)
 sex = 1 if st.selectbox('Sex', ['Female', 'Male']) == 'Male' else 0
 
@@ -142,7 +141,7 @@ if st.button('Run Prediction', type="primary"):
 st.divider()
 with st.expander("📁 Batch Prediction (CSV Upload)", expanded=False):
     uploaded_file = st.file_uploader(
-        "Upload a CSV with columns matching the training features",
+        "Upload a CSV File to run multiple predictions at once. Ensure columns match the features above (exact names, no extra columns).",
         type=["csv"]
     )
 
