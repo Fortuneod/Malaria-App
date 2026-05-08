@@ -79,10 +79,10 @@ with col2:
     Convulsion = 1 if st.checkbox('Convulsion') else 0
     Anemia = 1 if st.checkbox('Anemia') else 0
 with col3:
-    jundice = 1 if st.checkbox('Jundice') else 0
-    cocacola_urine = 1 if st.checkbox('Cocacola Urine') else 0
+    jundice = 1 if st.checkbox('Jaundice') else 0
+    cocacola_urine = 1 if st.checkbox('Coca-Cola Urine') else 0
     hypoglycemia = 1 if st.checkbox('Hypoglycemia') else 0
-    prostraction = 1 if st.checkbox('Prostraction') else 0
+    prostraction = 1 if st.checkbox('Prostration') else 0
     hyperpyrexia = 1 if st.checkbox('Hyperpyrexia') else 0
 
 if st.button('Run Prediction', type="primary"):
