@@ -85,7 +85,7 @@ with col3:
     prostraction = 1 if st.checkbox('Prostration') else 0
     hyperpyrexia = 1 if st.checkbox('Hyperpyrexia') else 0
 
-if st.button('Run Prediction', type="primary"):
+if st.button("✓ Run Prediction", type="primary"):
     row = {
         'age': age, 'sex': sex, 'fever': fever, 'cold': cold,
         'rigor': rigor, 'fatigue': fatigue, 'headace': headace,
@@ -141,7 +141,7 @@ if st.button('Run Prediction', type="primary"):
 # 4. BATCH PREDICTION (CSV Upload)
 # -------------------------------------------------
 st.divider()
-with st.expander("📁 Batch Prediction (CSV Upload)", expanded=False):
+with st.expander("\U0001F4C1 Batch Prediction (CSV Upload)", expanded=False):
     uploaded_file = st.file_uploader(
         "Upload a CSV File to run multiple predictions at once. Ensure columns match the features above (exact names, no extra columns).",
         type=["csv"]
