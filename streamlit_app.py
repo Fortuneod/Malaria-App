@@ -48,7 +48,7 @@ if model is not None and hasattr(model, 'feature_importances_'):
     st.sidebar.subheader("Top 5 Important Features")
     st.sidebar.bar_chart(importances)
 else:
-    st.sidebar.info("\U00026A0 Model does not expose feature_importances_.")
+    st.sidebar.info("\U000126A0 Model does not expose feature_importances_.")
 
 # --- Session-state prediction counter ---
 if "prediction_count" not in st.session_state:
