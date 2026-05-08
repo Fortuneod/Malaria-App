@@ -14,6 +14,8 @@ st.set_page_config(
 )
 
 st.title("\U0001F99F Malaria Severity Predictor")
+st.divider()
+
 # -------------------------------------------------
 # 1. Load the model & feature list once
 # -------------------------------------------------
@@ -34,7 +36,7 @@ model = (pipeline.named_steps.get('model')
 # -------------------------------------------------
 # 2. SIDEBAR: Top-5 Feature Chart + Request Counter
 # -------------------------------------------------
-st.sidebar.header("📊 Model Insights")
+st.sidebar.header("\U0001F4CA Model Insights")
 
 # --- Top 5 feature importances (bar chart) ---
 if model is not None and hasattr(model, 'feature_importances_'):
@@ -46,7 +48,7 @@ if model is not None and hasattr(model, 'feature_importances_'):
     st.sidebar.subheader("Top 5 Important Features")
     st.sidebar.bar_chart(importances)
 else:
-    st.sidebar.info("⚠️ Model does not expose feature_importances_.")
+    st.sidebar.info("\U00026A0 Model does not expose feature_importances_.")
 
 # --- Session-state prediction counter ---
 if "prediction_count" not in st.session_state:
